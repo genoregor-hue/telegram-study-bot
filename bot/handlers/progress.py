@@ -1,6 +1,4 @@
-"""
-Обработчики для отображения прогресса
-"""
+# Отображение прогресса
 from aiogram import Router, F
 from aiogram.types import Message
 from bot.keyboards.main_menu import get_main_menu

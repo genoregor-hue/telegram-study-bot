@@ -1,6 +1,4 @@
-"""
-Обработчик ошибок
-"""
+# Глобальная обработка ошибок
 from aiogram import Router
 from aiogram.types import ErrorEvent, Update
 from bot.utils.logger import logger
@@ -10,12 +8,6 @@ router = Router()
 
 @router.error()
 async def error_handler(event: ErrorEvent):
-    """
-    Глобальный обработчик ошибок
-    
-    Args:
-        event: Событие с ошибкой
-    """
     logger.error(f"Ошибка: {event.exception}", exc_info=event.exception)
     
     # Пытаемся отправить сообщение пользователю, если это возможно
